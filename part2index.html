@@ -1,87 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birdwatching</title>
     <style>
         body {
-            background-color: #90EE90; /* Light Green background */
-            font-family: sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #b3e58a;
+            color: #000;
+            margin: 0;
+            padding: 0;
         }
-        header {
+        .header {
+            background-color: #66cc33;
             text-align: center;
             padding: 20px;
         }
-        h1 {
-            color: #006400; /* Dark Green header color */
+        .header h1 {
+            font-family: "Lucida Console", Monaco, monospace;
+            font-size: 3em;
+            margin: 0;
         }
-        nav {
-            background-color: #008000; /* Dark Green navigation bar color */
-            padding: 10px;
-            text-align: center;
+        .nav {
+            background-color: #4caf50;
+            overflow: hidden;
         }
-        nav a {
+        .nav a {
+            float: left;
+            display: block;
             color: white;
+            text-align: center;
+            padding: 14px 16px;
             text-decoration: none;
-            margin: 0 20px;
         }
-        .container {
-            width: 80%;
-            margin: 0 auto;
+        .nav a:hover {
+            background-color: #45a049;
+        }
+        .content {
             display: flex;
             justify-content: space-between;
-        }
-        .section {
-            background-color: white;
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            flex: 1;
-            margin: 20px;
+        }
+        .left, .right {
+            width: 48%;
+        }
+        .left {
+            background-color: #a1d76a;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .left h2 {
+            font-family: "Lucida Console", Monaco, monospace;
+            font-size: 2em;
+            margin-top: 0;
+        }
+        .right {
+            background-color: #9bd65a;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .right h2 {
+            font-family: "Lucida Console", Monaco, monospace;
+            font-size: 2em;
+            margin-top: 0;
         }
         .footer {
             text-align: center;
+            background-color: #8fbc4a;
             padding: 10px;
-            background-color: #008000; /* Dark Green footer color */
-            color: white;
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+        .photos img {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Birdwatching</h1>
-        <img src="dove.png" alt="dove icon" style="height: 50px;"> 
-    </header>
+    <div class="header">
+        <h1>BIRDWATCHING</h1>
+    </div>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Get Started</a>
-        <a href="#">Photos</a>
-        <a href="#">Gear</a>
-        <a href="#">Forum</a>
-    </nav>
+    <div class="nav">
+        <a href="#">HOME</a>
+        <a href="#">GET STARTED</a>
+        <a href="#">PHOTOS</a>
+        <a href="#">GEAR</a>
+        <a href="#">FORUM</a>
+    </div>
 
-    <div class="container">
-        <div class="section">
-            <h2>Welcome</h2>
+    <div class="content">
+        <div class="left">
+            <h2>WELCOME</h2>
             <p>Welcome to our fake birdwatching site. If this were a real site, it would be the ideal place to come to learn more about birdwatching, whether you are a beginner looking to learn how to get into birding, or an expert wanting to share ideas, tips, and photos with other like-minded people.</p>
             <p>So don't waste time! Get what you need, then turn off that computer and get out into the great outdoors!</p>
         </div>
-        <div class="section">
-            <h2>Favourite Photos</h2>
-            <img src="_favorite-1_th.png" alt="Bird 1" style="width: 100px;">
-            <img src="_favorite-2_th.png" alt="Bird 2" style="width: 100px;">
-            <img src="_favorite-3_th.png" alt="Bird 3" style="width: 100px;">
+        <div class="right">
+            <h2>FAVOURITE PHOTOS</h2>
+            <div class="photos">
+                <img src="bird1.jpg" alt="Bird 1">
+                <img src="bird2.jpg" alt="Bird 2">
+                <img src="bird3.jpg" alt="Bird 3">
+                <img src="bird4.jpg" alt="Bird 4">
+            </div>
         </div>
     </div>
 
-    <footer>
-        <p>This fake website example is CC0 - any part of this code may be reused in any way you wish. Original example written by Chris Mills, 2016.</p>
-        <p><a href="http://game-icons.net/lorc/originals/dove.html">Dove icon</a> by Lorc.</p>
-    </footer>
+    <div class="footer">
+        <p>This fake website example is CC0 — any part of this code may be reused in any way you wish. Original example written by Chris Mills, 2016.</p>
+        <p><a href="https://example.com">Dove icon</a> by Lorc.</p>
+    </div>
 
 </body>
 </html>
