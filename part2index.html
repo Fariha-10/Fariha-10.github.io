@@ -1,120 +1,188 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birdwatching</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #b3e58a;
-            color: #000;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            background-color: #66cc33;
-            text-align: center;
-            padding: 20px;
-        }
-        .header h1 {
-            font-family: "Lucida Console", Monaco, monospace;
-            font-size: 3em;
-            margin: 0;
-        }
-        .nav {
-            background-color: #4caf50;
-            overflow: hidden;
-        }
-        .nav a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        .nav a:hover {
-            background-color: #45a049;
-        }
-        .content {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-        }
-        .left, .right {
-            width: 48%;
-        }
-        .left {
-            background-color: #a1d76a;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .left h2 {
-            font-family: "Lucida Console", Monaco, monospace;
-            font-size: 2em;
-            margin-top: 0;
-        }
-        .right {
-            background-color: #9bd65a;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .right h2 {
-            font-family: "Lucida Console", Monaco, monospace;
-            font-size: 2em;
-            margin-top: 0;
-        }
-        .footer {
-            text-align: center;
-            background-color: #8fbc4a;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .photos img {
-            width: 100px;
-            height: 100px;
-            margin: 5px;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+  <!--
+  Name: Muniba Maududi
+  File: Assignment1_Part2.html
+  Date: 17 January 2025
+  Desc: Lab 1 Part 2 Structuring a page content
+  -->
 </head>
+
+<title>Lab 1 - Part 2 - Structuring a page</title>
+
+<style>    
+html, body {
+    margin: 0;
+    padding: 0;
+}
+    
+html {
+    font-size: 10px;
+    background-color: gray;
+}
+
+body {
+    width: 97%;
+    min-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    padding: 1%;
+    background-color: green;
+    color: #2b2b2b;
+}
+
+h1, h2, h3 {
+    font-family: 'Cinzel Decorative', cursive;
+    color: black;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+    text-transform: uppercase;
+    background-color: green;
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 2.2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p, li {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+header {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+  flex: 5;
+}
+
+header img {
+  display: block;
+  height: 60px;
+  padding: 10px;
+}
+
+nav {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: #42b81e;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 1.8rem;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  gap: 10px;
+}
+
+article, section {
+  flex: 3;
+  background-color: rgba(45, 223, 14, 0.8);
+  padding: 1%;
+  border-radius: 5px;
+}
+
+aside {
+  flex: 1;
+  background-color: rgba(45, 223, 14, 0.8);
+  padding: 1%;
+  border-radius: 5px;
+}
+
+aside img {
+  width: 100%;
+  border-radius: 5px;
+ margin-bottom: 10px;
+}
+
+footer {
+  margin-top: 10px;
+  text-align: center;
+  background-color: #39a124;
+  color: white;
+  padding: 10px 0;
+  font-size: 1.4rem;
+}
+</style>
+
 <body>
+<header>
+    <h1>Birdwatching</h1>
+    <img src="dove.png" alt="simple dove logo" class="logo">
+</header>
 
-    <div class="header">
-        <h1>BIRDWATCHING</h1>
-    </div>
+<nav>
+  <ul>
+    <li><a href="#"></a>Home</li>
+    <li><a href="#"></a>Get Started</li>
+    <li><a href="#"></a>Photos</li>
+    <li><a href="#"></a>Gear</li>
+    <li><a href="#"></a>Forum</li>
+  </ul>
+</nav>
 
-    <div class="nav">
-        <a href="#">HOME</a>
-        <a href="#">GET STARTED</a>
-        <a href="#">PHOTOS</a>
-        <a href="#">GEAR</a>
-        <a href="#">FORUM</a>
-    </div>
+<main>
+  
+  <article>
+  <h2>Welcome</h2>
+      <p>Welcome to our fake birdwatching site. If this were a real site, it would be the ideal place to come to learn more about birdwatching, whether you are a beginner looking to learn how to get into birding, or an expert wanting to share ideas, tips, and photos with other like-minded people.</p>
+      <p>So don't waste time! Get what you need, then turn off that computer and get out into the great outdoors!</p>
+  </article>
 
-    <div class="content">
-        <div class="left">
-            <h2>WELCOME</h2>
-            <p>Welcome to our fake birdwatching site. If this were a real site, it would be the ideal place to come to learn more about birdwatching, whether you are a beginner looking to learn how to get into birding, or an expert wanting to share ideas, tips, and photos with other like-minded people.</p>
-            <p>So don't waste time! Get what you need, then turn off that computer and get out into the great outdoors!</p>
-        </div>
-        <div class="right">
-            <h2>FAVOURITE PHOTOS</h2>
-            <div class="photos">
-                <img src="bird1.jpg" alt="Bird 1">
-                <img src="bird2.jpg" alt="Bird 2">
-                <img src="bird3.jpg" alt="Bird 3">
-                <img src="bird4.jpg" alt="Bird 4">
-            </div>
-        </div>
-    </div>
+  <aside>
+    <h3>Favorite Photos</h3>
+    <a href="favorite-1.jpg"></a><img src="favorite-1_th.jpg" alt= "Small black bird, black claws, long black slender beak, links to larger version of the image">
+    <a href="favorite-2.jpg"></a><img src="favorite-2_th.jpg" alt= "Top half of a pretty bird with bright blue plumage on neck, light colored beak, blue headdress, links to larger version of the image">
+    <a href="favorite-3_th.jpg"></a><img src="favorite-3_th.jpg" alt= "Top half of a large bird with white plumage, very long curved narrow light colored break, links to larger version of the image">
+    <a href="favorite-4.jpg"></a><img src="favorite-4_th.jpg" alt= "Large bird, mostly white plumage with black plumage on back and rear, long straight white beak, links to larger version of the image">
+  </aside>
+</main>
 
-    <div class="footer">
-        <p>This fake website example is CC0 — any part of this code may be reused in any way you wish. Original example written by Chris Mills, 2016.</p>
-        <p><a href="https://example.com">Dove icon</a> by Lorc.</p>
-    </div>
+<footer>
+  <p>This fake website example is CC0 — any part of this code may be reused in any way you wish. Original example written by Chris Mills, 2016.</p>
+  <a href="Dove icon"></a> by Lorc.
+</footer>
 
 </body>
 </html>
