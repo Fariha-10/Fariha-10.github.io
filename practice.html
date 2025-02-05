@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Mozilla Rockstars splash page</title>
+    <title>Mozilla splash page</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!--
+    Name: Muniba Maududi
+    File: Assignment2_Part1.html
+    Date: 3 February 2025
+    Desc: Lab 2 Part 1 creating mozilla splash page
+    -->
+
     <style>
       /* header and body setup */
 
@@ -61,7 +68,7 @@
       iframe {
         float: left;
         margin: 0 20px 20px 0;
-        max-width: 100%;
+        max-width: 400px;
       }
 
       /* further info links */
@@ -98,12 +105,28 @@
   </head>
   <body>
     <header>
-      <h1>Mozilla Rockstars</h1>
-      <img src="firefox_logo-only_RGB-120.png" alt="firefox logo">
+      <h1>Mozilla</h1>
+      <!-- insert <img> element, link to the small
+          version of the Firefox logo -->
+          <img 
+        src="firefox_logo-only_RGB_small.png" 
+        srcset="firefox_logo-only_RGB.png 400w, firefox_logo-only_RGB_small.png 120w" 
+        sizes="(max-width: 600px) 120px, 400px" 
+        alt="Firefox logo">
     </header>
+
     <main>
       <article>
-        <iframe width="400" height="315" src="https://www.youtube.com/embed/ojcNcvb1olg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- insert iframe from youtube -->
+        <iframe 
+          width="400" 
+          height="315" 
+          src="https://www.youtube.com/embed/ojcNcvb1olg?si=ovuE_UrpiMCyaGWo" 
+          title="YouTube video player" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+        </iframe>
 
         <h2>Rocking the free web</h2>
 
@@ -113,44 +136,51 @@
       </article>
 
       <div class="further-info">
+        <!-- insert images with srcsets and sizes -->
+        <!-- Firefox logo link -->
         <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img 
-            srcset="firefox_logo-only_RGB-120.png 120w, firefox_logo-only_RGB-400.png 400w"
-            sizes="(max-width: 500px) 120px, 400px"
-            src="firefox_logo-only_RGB-400.png" alt="firefox logo">
+            <img 
+                src="firefox_logo-only_RGB_large.png" 
+                srcset="firefox_logo-only_RGB_large.png 400w, firefox_logo-only_RGB_small.png 120w" 
+                sizes="(max-width: 600px) 120px, 400px" 
+                alt="Firefox logo">
         </a>
+
+        <!-- Dinosaur logo link -->
         <a href="https://www.mozilla.org/">
-          <img 
-            srcset="mozilla-dinosaur-head-120.png 120w, mozilla-dinosaur-head-400.png 400w"
-            sizes="(max-width: 500px) 120px, 400px"
-            src="mozilla-dinosaur-head-400.png" 
-            alt="dinosaur head">
+            <img 
+                src="mozilla-dinosaur-head_large.png" 
+                srcset="mozilla-dinosaur-head_large.png 400w, mozilla-dinosaur-head_small.png 120w" 
+                sizes="(max-width: 600px) 120px, 400px" 
+                alt="dinosaur head">
         </a>
+
+        <!-- Add-ons logo link -->
         <a href="https://addons.mozilla.org/">
-          <img 
-            srcset="firefox-addons-120.jpg 120w, firefox-addons-400.jpg 400w"
-            sizes="(max-width: 500px) 120px, 400px"
-            src="firefox-addons-400.jpg" 
-            alt="firefox add-ons">
+            <img 
+                src="firefox-addons_large.jpg" 
+                srcset="firefox-addons_large.jpg 400w, firefox-addons_small.jpg 120w" 
+                sizes="(max-width: 600px) 120px, 400px" 
+                alt="Firefox Add-ons logo">
         </a>
+
+        <!-- MDN SVG logo link -->
         <a href="https://developer.mozilla.org/en-US/">
-          <img 
+            <img 
             src="mdn.svg" 
-            alt="mdn">
+            alt="Developer logo with a horse head design">
         </a>
+
         <div class="clearfix"></div>
       </div>
+
       <div class="red-panda">
+        <!-- Red panda picture element -->
         <picture>
-          <source 
-            media="(max-width:600px)" 
-            srcset="red-panda-600.jpg">
-          <img 
-            src="red-panda-1200.jpg" 
-            alt="red panda">
+            <source media="(max-width: 600px)" srcset="red-panda_portrait.jpg">
+            <img src="red-panda_landscape.jpg" alt="a red panda">
         </picture>
       </div>
     </main>
   </body>
 </html>
-
