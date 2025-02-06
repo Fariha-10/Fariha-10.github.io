@@ -113,7 +113,16 @@
     <main>
       <article>
         <!-- inserted iframe from youtube -->
-        <iframe width="400" height="315" src="https://www.youtube.com/embed/ojcNcvb1olg?si=0L2ikqmfHOmMAuXw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe 
+        width="400" 
+        height="315" 
+        src="https://www.youtube.com/embed/ojcNcvb1olg?si=0L2ikqmfHOmMAuXw" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+        </iframe>
 
         <h2>Rocking the free web</h2>
 
@@ -136,8 +145,8 @@
         <!-- Dinosaur logo link -->
         <a href="https://www.mozilla.org/">
             <img 
-            srcset="mozilla-dinosaur-head-120.png 120 w,
-            mozilla-dinosaur-head-400.png 400 w"
+            srcset="mozilla-dinosaur-head-120.png 120w,
+            mozilla-dinosaur-head-400.png 400w"
             sizes="(max-width:500px) 120px , 400px"
             src="mozilla-dinosaur-head-400.png" 
             alt="dinosaur head">
@@ -145,7 +154,7 @@
         <!-- Add-ons logo link -->
         <a href="https://addons.mozilla.org/">
           <img 
-          srcset="firefox-addons-120.jpg 120w
+          srcset="firefox-addons-120.jpg 120w,
           firefox-addons-400.jpg 400w"
           sizes="(max-width:500px) 120px , 400px"
           src="firefox-addons-400.jpg" 
@@ -162,7 +171,7 @@
         <!-- Red panda picture element -->
         <picture>
             <source 
-            media="(max-width:600)"
+            media="(max-width:600px)"
             srcset="red-panda-600-portrait.jpg">
             <img 
             src="red-panda-1200-rectangle.jpg" 
