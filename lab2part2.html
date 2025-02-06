@@ -5,18 +5,33 @@
     <meta name="viewport" content="width=device-width">
     <title>Planets data</title>
     <link href="minimal-table.css" rel="stylesheet" type="text/css">
+    
+    <!--
+    Name: Fariha Noshin
+    File: lab2part2.html
+    Date: 6 February 2025
+    Desc: Lab 2 Part 2 Structuring a planet data table
+    -->
+    
   </head>
   <body>
     <h1>Planets data</h1>
-    
+
+     <!--Table starts here-->
     <table>
+
+        <!-- column styling: the column (planet names) has a black border -->
         <colgroup>
             <col span="2">
             <col style="border: 3px solid black;">
         </colgroup>
+
+        <!-- Table caption context -->
         <caption>
             Data about the planets of our solar system (Planetary facts taken from <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>).
         </caption>
+
+        <!-- Table header -->
         <thead>
             <tr>
                 <td colspan ="2"></td>
@@ -33,6 +48,8 @@
             </tr>
         </thead>
         <tbody>
+
+            <!-- Terrestrial planets section -->
             <tr>
                 <th scope="rowgroup"colspan="2" rowspan="4">Terrestrial planets</th>
                 <th scope="row">Mercury</th>
@@ -82,6 +99,8 @@
                 <td>2</td>
                 <td>The red planet</td>
             </tr>
+
+            <!-- Jovian planets section -->
             <tr>
                 <th scope="rowgroup" rowspan="4">Jovian planets</th>
                 <th scope="rowgroup" rowspan="2">Gas giants</th>
@@ -132,6 +151,8 @@
                     <td>-200</td>
                     <td>14</td>
                     <td></td>
+
+            <!-- Dwarf planets section -->
             <tr>
                 <th scope="rowgroup" colspan="2" rowspan="2">Dwarf planets</th>
                 <th scope="row">Pluto</th>
