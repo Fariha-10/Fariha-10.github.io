@@ -3,4 +3,40 @@ html {
   }
   
   /* Your CSS below here */
+  div {
+    /* Increase size */
+    width: 400px; /* Bigger box */
+    height: 300px; /* Define height */
+    
+    /* Centering box on the page */
+    margin: 150px auto; /* Push it lower */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* Text styling */
+    font-size: 1.5rem; /* Larger text */
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+  
+    /* Border */
+    border-radius: 15px;
+    border: 1px solid #990000;
+  
+    /* Background */
+    background-color: red;
+    background-image: linear-gradient(
+      to top left,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0)
+    );
+  
+    /* Effects */
+    box-shadow: 
+      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(0, 0, 0, 0.6),
+      4px 4px 10px black;
+  }
   
