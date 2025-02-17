@@ -1,29 +1,36 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  h1 {
-    color: #375e97;
+}
+
+h1 {
+    color: hotpink; /* Updated color */
     font-size: 2em;
     font-family: Georgia, "Times New Roman", Times, serif;
-    border-bottom: 1px solid #375e97;
-  }
-  
-  h2 {
+    border-bottom: 10px dotted purple; /* Updated border */
+}
+
+h2 {
     font-size: 1.5em;
-  }
-  
-  .job-title {
+    font-style: italic; /* Makes h2 italic */
+}
+
+.job-title {
     color: #999999;
     font-weight: bold;
-  }
-  
-  a:link,
-  a:visited {
+}
+
+ul {
+    background-color: #eeeeee; /* Background color for contact list */
+    border: 5px solid purple; /* Border for ul */
+    padding: 10px; /* Padding for spacing */
+}
+
+a:link,
+a:visited {
     color: #fb6542;
-  }
-  
-  a:hover {
+}
+
+a:hover {
+    color: green; /* Green on hover */
     text-decoration: none;
-  }
-  
+}
