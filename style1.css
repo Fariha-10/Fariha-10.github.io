@@ -3,15 +3,18 @@ body {
 }
 
 h1 {
-    color: hotpink; /* Updated color */
+    /* Updated color */
+    color: hotpink; 
     font-size: 2em;
     font-family: Georgia, "Times New Roman", Times, serif;
-    border-bottom: 10px dotted purple; /* Updated border */
+    /* Updated border */
+    border-bottom: 10px dotted purple; 
 }
 
 h2 {
     font-size: 1.5em;
-    font-style: italic; /* Makes h2 italic */
+     /* Makes h2 italic */
+    font-style: italic;
 }
 
 .job-title {
@@ -20,9 +23,12 @@ h2 {
 }
 
 ul {
-    background-color: #eeeeee; /* Background color for contact list */
-    border: 5px solid purple; /* Border for ul */
-    padding: 10px; /* Padding for spacing */
+    /* Background color for contact list */
+    background-color: #eeeeee; 
+    /* Border for ul */
+    border: 5px solid purple;
+    /* Padding for spacing */
+    padding: 10px; 
 }
 
 a:link,
@@ -31,6 +37,7 @@ a:visited {
 }
 
 a:hover {
-    color: green; /* Green on hover */
+    /* Green on hover */
+    color: green; 
     text-decoration: none;
 }
