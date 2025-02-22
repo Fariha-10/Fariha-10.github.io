@@ -1,22 +1,23 @@
+/* General styles for the body */
 body {
     background-color: #fff;
     color: #333;
     margin: 0;
     font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
   }
-
+/* Ensures images are responsive and do not exceed their container */
   img {
       max-width: 100%;
       display: block;
   }
-  
+/* Styles for the logo section */
   .logo {
     font-size: 200%;
     padding: 50px 20px;
     margin: 0 auto;
     max-width: 980px;
   }
-  
+/* Grid layout for the main content */
   .grid {
     margin: 0 auto;
     padding: 0 20px;
@@ -26,14 +27,14 @@ body {
     gap: 20px;
   }
   
-  
+  /* Navigation bar styles */
   nav {
     background-color: #000;
     padding: .5em;
     position: sticky;
     top:0;
   }
-  
+  /* Styling for the navigation menu */
   nav ul {
     margin: 0;
     padding: 0;
@@ -41,13 +42,13 @@ body {
     display:flex;
     justify-content: space-between;
   }
-  
+  /* Navigation links styling */
   nav a {
     color: #fff;
     text-decoration: none;
     padding: .5em 1em;
   }
-  
+  /* Styles for the photo gallery grid */
   .photos {
     list-style: none;
     margin: 0;
@@ -56,7 +57,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 1px;
   }
-
+/* Feature image styling with float */
   .feature {
       width: 200px;
       float: left;
