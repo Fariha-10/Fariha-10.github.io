@@ -5,17 +5,17 @@ html {
   /* Your CSS below here */
   div {
     /* Increase size */
-    width: 400px; /* Bigger box */
-    height: 300px; /* Define height */
+    width: 400px; 
+    height: 300px; 
     
     /* Centering box on the page */
-    margin: 150px auto; /* Push it lower */
+    margin: 150px auto; 
     display: flex;
     align-items: center;
     justify-content: center;
   
     /* Text styling */
-    font-size: 1.5rem; /* Larger text */
+    font-size: 1.5rem; 
     text-align: center;
     color: white;
     text-shadow: 1px 1px 1px black;
