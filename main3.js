@@ -18,6 +18,7 @@ function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
+// Ball class to define properties and behaviors of each ball
 class Ball {
     constructor(x, y, velX, velY, color, size) {
       this.x = x;
@@ -28,6 +29,7 @@ class Ball {
       this.size = size;
     }
 
+    // Draw the ball on the canvas
     draw() {
         ctx.beginPath();
         ctx.fillStyle = this.color;
@@ -35,6 +37,8 @@ class Ball {
         ctx.fill();
     }
 
+    
+    // Update the ball's position based on its velocity
     update() {
         if (this.x + this.size >= width) {
           this.velX = -Math.abs(this.velX);
@@ -56,7 +60,7 @@ class Ball {
         this.y += this.velY;
       }
       
-      
+  // Check for collisions with other balls 
   collisionDetect() {
     for (const ball of balls) {
       if (!(this === ball)) {
@@ -72,8 +76,10 @@ class Ball {
   }
 }
 
+// Array to store all the balls
 const balls = [];
 
+// Create 25 random balls
 while (balls.length < 25) {
   const size = random(10, 20);
   const ball = new Ball(
@@ -89,10 +95,12 @@ while (balls.length < 25) {
   balls.push(ball);
 }
 
+// Main animation loop
 function loop() {
     ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
     ctx.fillRect(0, 0, width, height);
-  
+    
+    // Loop through all balls to draw, update, and detect collisions
     for (const ball of balls) {
       ball.draw();
       ball.update();
@@ -101,6 +109,6 @@ function loop() {
   
     requestAnimationFrame(loop);
   }
-  
+  // Start the animation loop
   loop();
 
