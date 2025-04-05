@@ -21,6 +21,7 @@ function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
+// Base Shape class that all shapes (balls, evil circle) inherit from
 class Shape {
 
     constructor(x, y, velX, velY) {
@@ -31,7 +32,8 @@ class Shape {
     }
   
   }
-
+  
+  // Ball class, inherits from Shape
   class Ball extends Shape {
 
     constructor(x, y, velX, velY, color, size) {
@@ -42,7 +44,7 @@ class Shape {
       this.exists = true;
     }
 
-
+  // Draw the ball on the canvas
   draw() {
     ctx.beginPath();
     ctx.fillStyle = this.color;
@@ -50,6 +52,7 @@ class Shape {
     ctx.fill();
   }
 
+  // Update ball's position and handle boundaries
   update() {
     if (this.x + this.size >= width) {
       this.velX = -Math.abs(this.velX);
@@ -71,6 +74,7 @@ class Shape {
     this.y += this.velY;
   }
 
+  // Collision detection between balls
   collisionDetect() {
     for (const ball of balls) {
       if (!(this === ball)) {
@@ -85,15 +89,16 @@ class Shape {
     }
   }
 }
-
+// EvilCircle class, inherits from Shape, controlled by the user
 class EvilCircle extends Shape {
 
     constructor(x, y) {
-      super(x, y, 20, 20);
+        super(x, y, velX, velY);
   
       this.color = "white";
       this.size = 10;
-  
+
+      // Event listener for user input (moving the evil circle with arrow keys)
       window.addEventListener('keydown', (e) => {
         switch(e.key) {
           case 'a':
@@ -111,7 +116,7 @@ class EvilCircle extends Shape {
         }
       });
     }
-
+    // Draw the evil circle on the canvas
     draw() {
         ctx.beginPath();
         ctx.strokeStyle = this.color;
@@ -120,6 +125,7 @@ class EvilCircle extends Shape {
         ctx.stroke();
     }
 
+    // Prevent the evil circle from going out of bounds
     checkBounds() {
         if ((this.x + this.size) >= width) {
           this.x -= this.size;
@@ -137,7 +143,8 @@ class EvilCircle extends Shape {
           this.y += this.size;
         }
     }
-
+    
+    // Collision detection between the evil circle and other balls 
     collisionDetect() {
         for (const ball of balls) {
           if (ball.exists) {
@@ -156,9 +163,10 @@ class EvilCircle extends Shape {
     
     }
     
-  
+// Array to store all balls/
 const balls = [];
 
+// Create 25 random balls
 while (balls.length < 25) {
   const size = random(10, 20);
   const ball = new Ball(
@@ -176,13 +184,16 @@ while (balls.length < 25) {
   count++;
   para.textContent = 'Ball count: ' + count;
 }
- 
+
+// Create the evil circle
 const evilBall = new EvilCircle(random(0, width), random(0, height));
 
+// Main loop to update the canvas and animate the balls and evil circle
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
 
+   // Draw and update all balls
   for (const ball of balls) {
     if (ball.exists) {
       ball.draw();
@@ -197,5 +208,5 @@ function loop() {
 
   requestAnimationFrame(loop);
 }
-
+// Start the animation loop
 loop();
