@@ -93,7 +93,7 @@ class Shape {
 class EvilCircle extends Shape {
 
     constructor(x, y) {
-        super(x, y, velX, velY);
+        super(x, y, 20, 20);
   
       this.color = "white";
       this.size = 10;
