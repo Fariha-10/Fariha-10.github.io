@@ -32,13 +32,17 @@ for (const image of images) {
 
 /* Wiring up the Darken/Lighten button */
 
+
+// Event listener for the button to toggle the overlay color between dark and light
 btn.addEventListener('click', () => {
     const btnClass = btn.getAttribute('class');
     if (btnClass === 'dark') {
+      // If the button has the 'dark' class, change to 'light' and adjust overlay color
       btn.setAttribute('class','light');
       btn.textContent = 'Lighten';
       overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
     } else {
+       // If the button has the 'light' class, change to 'dark' and adjust overlay color
       btn.setAttribute('class','dark');
       btn.textContent = 'Darken';
       overlay.style.backgroundColor = 'rgba(0,0,0,0)';
