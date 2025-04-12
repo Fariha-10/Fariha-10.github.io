@@ -5,7 +5,8 @@
 
     <title>Accessibility assessment</title>
     <!-- Link to Google Fonts for typography -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Sonsie+One&display=swap" rel="stylesheet">
+
 
     <!-- Link to external stylesheet for additional styles -->
     <link rel="stylesheet" href="style7.css">
@@ -51,7 +52,7 @@
         <h2>The trouble with Bears</h2>
 
         <!-- removing <br> </br> from here and adding <p> </p> instead-->
-        <p>>By Evan Wild</p>
+        <p>By Evan Wild</p>
        
         <p>Tall, lumbering, angry, dangerous. The real live bears of this world are proud, independent creatures, self-serving and always on the hunt for food. Nothing like the bears you see on TV, like Baloo from renowned documentary, The Jungle Book.</p>
        
@@ -118,18 +119,13 @@
         
         <p>are romantic creatures by nature, and will naturally look for a mate that they can spend the rest of their lives with. They will woo a potential suitor by making their dwelling look attractive — for example with cave paintings or a bed of reeds in the case of a wild bear, and mood lighting and a Michael Bublé CD in the case of an urban bear.</p>
         
-        <p>The following audio clip contains a fact file providing more details about bear mating rituals, along with samples and quotes from experts.</p>
+        <p>The following audio clip contains a fact file providing more details about bear mating rituals, along with samples and quotes from experts.You can also access a <a href="transcript.html">text transcript of the audio clip</a>.</p>
         
         <audio controls>
           <source src="media/bear.mp3" type="audio/mp3">
           <source src="media/bear.ogg" type="audio/ogg">
           <p>It looks like your browser doesn't support HTML5 audio players.Here is a <a href="bear.mp3">direct link to the audio file</a> instead.</p>
         </audio>
-
-        <div class="transcript" aria-label="Transcript of the audio">
-            <h4>Transcript:</h4>
-            <p>This is a really an ODI fact file about this, but it is an ODI file that you can transcribe. </p>
-        </div>
 
 
         <aside>
@@ -143,27 +139,28 @@
         </aside>
         <section class="comments">
             <!-- Defining class show and hide attribute using button tags-->
-            <button class="show-hide" aria-expanded="false" aria-controls="comments-section">Show comments</button>
+            <button class="show-hide">Show comments</button>
 
           <div class="comment-wrapper">
 
             <h2>Add comment</h2>
-
+            <form class="comment-form">
                 <div class="flex-pair">
-                     <!-- wraping text Your name: in the label tags-->
-                    <label for="name">Your name:</label>
-                    <input type="text" name="name" id="name" placeholder="Enter your name" aria-label="Your name">
+  
+                  <!-- wraping text Your name: in the label tags-->
+                  <label for="name">Your name:</label>
+                  <input type="text" name="name" id="name" placeholder="Enter your name">
                 </div>
                 <div class="flex-pair">
-                     <!-- wraping text Your comment: in the label tags-->
-                    <label for="comment">Your comment:</label>
-                    <input type="text" name="comment" id="comment" placeholder="Enter your comment" aria-label="Your comment">
+  
+                  <!-- wraping text Your comment: in the label tags-->
+                  <label for="comment">Your comment:</label>
+                  <input type="text" name="comment" id="comment" placeholder="Enter your comment">
                 </div>
                 <div>
-                    <input type="submit" value="Submit comment" aria-label="Submit comment">
+                  <input type="submit" value="Submit comment">
                 </div>
-                </form>
-
+              </form>
             <h2>Comments</h2>
 
             <ul class="comment-container">
@@ -183,7 +180,7 @@
       </article>
 
       <div class="secondary">
-        <h1>Related</h2>
+        <h2>Related</h2>
 
         <ul>
           <li><a href="#">The trouble with Bees</a></li>
