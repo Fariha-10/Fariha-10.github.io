@@ -27,7 +27,7 @@
       </ul>
 
       <form class="search">
-        <input type="search" name="q" placeholder="Search query">
+        <input type="search" name="q" placeholder="Search query" aria-label="Search through site content">
         <input type="submit" value="Go!">
       </form>
     </nav>
@@ -126,19 +126,18 @@
             <h2>Add comment</h2>
 
             <form class="comment-form">
-              <div class="flex-pair">
-                Your name:
-                <input type="text" name="name" id="name" placeholder="Enter your name">
-              </div>
-              <div class="flex-pair">
-                Your comment:
-                <input type="text" name="comment" id="comment" placeholder="Enter your comment">
-              </div>
-              <div>
-                <input type="submit" value="Submit comment">
-              </div>
-            </form>
-
+                <div class="flex-pair">
+                  Your name:
+                  <input type="text" name="name" id="name" placeholder="Enter your name" aria-label="Your name">
+                </div>
+                <div class="flex-pair">
+                  Your comment:
+                  <input type="text" name="comment" id="comment" placeholder="Enter your comment" aria-label="Your comment">
+                </div>
+                <div>
+                  <input type="submit" value="Submit comment" aria-label="Submit comment">
+                </div>
+              </form>
             <h2>Comments</h2>
 
             <ul class="comment-container">
