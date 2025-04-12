@@ -18,7 +18,7 @@ html, body {
   
   /* || typography */
   
-  font[size="7"], font[size="6"], font[size="5"] {
+  h1,h2,h3 {
     font-family: 'Sonsie One', cursive;
     color: #2a2a2a;
   }
