@@ -52,7 +52,7 @@ html, body {
   /* || header layout */
   
   div[class="nav"], article, footer, .secondary {
-    background-color: green;
+    background-color: white;
   }
   
   article, footer, .secondary {
