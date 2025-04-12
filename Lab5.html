@@ -4,17 +4,29 @@
     <meta charset="utf-8">
 
     <title>Accessibility assessment</title>
+    <!-- Link to Google Fonts for typography -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+
+    <!-- Link to external stylesheet for additional styles -->
     <link rel="stylesheet" href="style7.css">
 
     <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <!--
+     Name: Fariha Noshin
+     Date: 11 April 2025
+     Desc: Lab 5 Accessibility troubleshooting
+     -->
   </head>
 
   <body>
+     <!-- Header section with website title -->
     <div class="header">
+
+        <!-- Changing font tag into h1 tags-->
       <h1>Welcome to our wildlife website</h1> 
     </div>
 
@@ -26,6 +38,7 @@
         <li><a href="#">Blog</a></li>
       </ul>
 
+      <!-- Include an aria-label attribute for form inputs -->
       <form class="search">
         <input type="search" name="q" placeholder="Search query" aria-label="Search through site content">
         <input type="submit" value="Go!">
@@ -34,24 +47,31 @@
 
     <main>
       <article>
+          <!-- Changing font tag into h2 tags-->
         <h2>The trouble with Bears</h2>
-        
+
+        <!-- removing <br> </br> from here and adding <p> </p> instead-->
         <p>>By Evan Wild</p>
        
         <p>Tall, lumbering, angry, dangerous. The real live bears of this world are proud, independent creatures, self-serving and always on the hunt for food. Nothing like the bears you see on TV, like Baloo from renowned documentary, The Jungle Book.</p>
        
         <p>So what are bears really like, and why does the world's media portray them with such a skewed vision? In this article we try to answer those questions, and give you a real insight into the life of the bear.</p>
-        
+         
+        <!-- Changing font tag into h3 tags-->
         <h3>Types of bear</h3>
         
         <p>Bears come in two varieties — large and medium. You don't get small bears. If you have seen a small bear, then it was in fact probably a baby bear (cub) from another species.</p>
        
+        
         <P>Bears can also be classified in terms of their habitat — both large and medium bears are just as at home in urban areas as they are in the countryside. Different habitats encourange different behaviour however, as you'll find out below. The below table also gives you some useful facts about bears.</P>
+        
+        <!--makes the table of data more screenreader friendly by including a caption-->
         <table>
             <caption>Bears Information</caption>
             
           <thead>
             <tr>
+                 <!-- changing the row from <td> to <th> elements and adding column scope-->
                 <th scope="col">Bear Type</th>
                 <th scope="col">Coat</th>
                 <th scope="col">Adult size</th>
@@ -80,10 +100,12 @@
           </tbody>
         </table>
 
+         <!-- Changing font tag into h3 tags-->
         <h3>Habitats and Eating habits</h3>
         
         <p>Wild bears eat a variety of meat, fish, fruit, nuts, and other natually growing ingredients. In general they will hunt for food themselves in woodland or rivers, but at a push they will track down their sustenance from farms or country houses. They tend to live in relative isolation, in caves, tents, or cottages.</p>
        
+        <!-- Adding alt attribute for the images -->
         <img src="media/wild-bear.jpg" alt="Wild bear">
         
         <p>Urban (gentrified) bears on the other hand have largely abandoned the old ways. They will hunt other urban creatures if necessary (including other predators like rats and foxes), but prefer to scavenge from readily available urban food outlets like dumpsters, bins, and fast food joints. When food has proven scarce, urban bears have even been known to break into people's kitchens and steal essentials like baked beans, ready meals, and microwave ovens.</p>
@@ -120,6 +142,7 @@
 
         </aside>
         <section class="comments">
+            <!-- Defining class show and hide attribute using button tags-->
             <button class="show-hide" aria-expanded="false" aria-controls="comments-section">Show comments</button>
 
           <div class="comment-wrapper">
@@ -127,10 +150,12 @@
             <h2>Add comment</h2>
 
                 <div class="flex-pair">
+                     <!-- wraping text Your name: in the label tags-->
                     <label for="name">Your name:</label>
                     <input type="text" name="name" id="name" placeholder="Enter your name" aria-label="Your name">
                 </div>
                 <div class="flex-pair">
+                     <!-- wraping text Your comment: in the label tags-->
                     <label for="comment">Your comment:</label>
                     <input type="text" name="comment" id="comment" placeholder="Enter your comment" aria-label="Your comment">
                 </div>
